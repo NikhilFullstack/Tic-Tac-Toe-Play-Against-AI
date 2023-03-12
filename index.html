@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     
 </head>
 <body>
-    <div class="h-screen w-screen back flex">
+    <div class="h-screen w-screen back flex" style="height: 100vh; width: 100vw;">
 
         <svg id="logo" viewBox="0 0 1158 466" fill="none" xmlns="http://www.w3.org/2000/svg">
             <mask id="path-1-outside-1_1_2" maskUnits="userSpaceOnUse" x="39" y="85" width="407" height="336" fill="black">
@@ -38,8 +38,8 @@
             <div class="start-div flex flex-col justify-center content-center absolute right-1/4 top-40">
                 <h1 class="  font-semibold text-2xl translate-y-[-180%] translate-x-4">Choose One of the following</h1>
                 <div class="xoimage flex flex-wrap gap-8 relative min-w-max">
-                    <img onclick="xclick()" src="/images/letter-x.png" alt="letter-X" srcset=""  class="x-img translate-y-0 h-[70x] w-[150px]  relative mx-auto my-auto">
-                    <img onclick="oclick()" src="/images/letter-o.png" alt="letter-O" srcset=""  class="o-img translate-y-0 h-[70x] w-[150px]  relative mx-auto my-auto">
+                    <img onclick="xclick()" src="/images/letter-x.jpg" alt="letter-X" srcset=""  class="x-img translate-y-0 h-[70x] w-[150px]  relative mx-auto my-auto">
+                    <img onclick="oclick()" src="/images/letter-o.jpg" alt="letter-O" srcset=""  class="o-img translate-y-0 h-[70x] w-[150px]  relative mx-auto my-auto">
                 </div>
             </div>
                            
@@ -51,40 +51,40 @@
             <button class="absolute bottom-5 left-5 text-2xl text-slate-300 border-2 border-solid p-4 rounded-2xl ml-4 hover:bg-pink-500" onclick="reset()">Reset</button>
             <div class="main h-[80%] px-6 translate-y-16 w-[55%] my-auto content-center justify-center grid grid-cols-3 grid-rows-3 mx-auto">
                 <div class="items rounded-2xl relative" onclick="arr11()">
-                    <img src="/images/letter-x.png" alt="letter-X" srcset="" a11x class="pak translate-y-5  w-24  relative mx-auto my-auto">
-                    <img src="/images/letter-o.png" alt="letter-O" srcset="" a11o class="pak translate-y-[-76%] w-24 relative mx-auto my-auto">
+                    <img src="/images/letter-x.jpg" alt="letter-X" srcset="" a11x class="pak translate-y-5  w-24  relative mx-auto my-auto">
+                    <img src="/images/letter-o.jpg" alt="letter-O" srcset="" a11o class="pak translate-y-[-76%] w-24 relative mx-auto my-auto">
                 </div>
                 <div class="items rounded-2xl relative" onclick="arr12()">
-                    <img src="/images/letter-x.png" alt="letter-X" srcset="" a12x class="pak translate-y-5  w-24 relative mx-auto my-auto">
-                    <img src="/images/letter-o.png" alt="letter-O" srcset="" a12o class="pak translate-y-[-76%] w-24 relative mx-auto my-auto">
+                    <img src="/images/letter-x.jpg" alt="letter-X" srcset="" a12x class="pak translate-y-5  w-24 relative mx-auto my-auto">
+                    <img src="/images/letter-o.jpg" alt="letter-O" srcset="" a12o class="pak translate-y-[-76%] w-24 relative mx-auto my-auto">
                 </div>
                 <div class="items rounded-2xl relative" onclick="arr13()">
-                    <img src="/images/letter-x.png" alt="letter-X" srcset="" a13x class="pak translate-y-5 w-24 relative mx-auto my-auto">
-                    <img src="/images/letter-o.png" alt="letter-O" srcset="" a13o class="pak translate-y-[-76%] w-24 relative mx-auto my-auto">
+                    <img src="/images/letter-x.jpg" alt="letter-X" srcset="" a13x class="pak translate-y-5 w-24 relative mx-auto my-auto">
+                    <img src="/images/letter-o.jpg" alt="letter-O" srcset="" a13o class="pak translate-y-[-76%] w-24 relative mx-auto my-auto">
                 </div>
                 <div class="items rounded-2xl relative" onclick="arr21()">
-                    <img src="/images/letter-x.png" alt="letter-X" srcset="" a21x class="pak translate-y-5 w-24 relative mx-auto my-auto">
-                    <img src="/images/letter-o.png" alt="letter-O" srcset="" a21o class="pak translate-y-[-76%] w-24 relative mx-auto my-auto">
+                    <img src="/images/letter-x.jpg" alt="letter-X" srcset="" a21x class="pak translate-y-5 w-24 relative mx-auto my-auto">
+                    <img src="/images/letter-o.jpg" alt="letter-O" srcset="" a21o class="pak translate-y-[-76%] w-24 relative mx-auto my-auto">
                 </div>
                 <div class="items rounded-2xl relative" onclick="arr22()">
-                    <img src="/images/letter-x.png" alt="letter-X" srcset="" a22x class="pak translate-y-5 w-24 relative mx-auto my-auto">
-                    <img src="/images/letter-o.png" alt="letter-O" srcset="" a22o class="pak translate-y-[-76%] w-24 relative mx-auto my-auto">
+                    <img src="/images/letter-x.jpg" alt="letter-X" srcset="" a22x class="pak translate-y-5 w-24 relative mx-auto my-auto">
+                    <img src="/images/letter-o.jpg" alt="letter-O" srcset="" a22o class="pak translate-y-[-76%] w-24 relative mx-auto my-auto">
                 </div>
                 <div class="items rounded-2xl relative" onclick="arr23()">
-                    <img src="/images/letter-x.png" alt="letter-X" srcset="" a23x class="pak translate-y-5 w-24 relative mx-auto my-auto">
-                    <img src="/images/letter-o.png" alt="letter-O" srcset="" a23o class="pak translate-y-[-76%] w-24 relative mx-auto my-auto">
+                    <img src="/images/letter-x.jpg" alt="letter-X" srcset="" a23x class="pak translate-y-5 w-24 relative mx-auto my-auto">
+                    <img src="/images/letter-o.jpg" alt="letter-O" srcset="" a23o class="pak translate-y-[-76%] w-24 relative mx-auto my-auto">
                 </div>
                 <div class="items rounded-2xl relative" onclick="arr31()">
-                    <img src="/images/letter-x.png" alt="letter-X" srcset="" a31x class="pak translate-y-5 w-24 relative mx-auto my-auto">
-                    <img src="/images/letter-o.png" alt="letter-O" srcset="" a31o class="pak translate-y-[-76%] w-24 relative mx-auto my-auto">
+                    <img src="/images/letter-x.jpg" alt="letter-X" srcset="" a31x class="pak translate-y-5 w-24 relative mx-auto my-auto">
+                    <img src="/images/letter-o.jpg" alt="letter-O" srcset="" a31o class="pak translate-y-[-76%] w-24 relative mx-auto my-auto">
                 </div>
                 <div class="items rounded-2xl relative" onclick="arr32()">
-                    <img src="/images/letter-x.png" alt="letter-X" srcset="" a32x class="pak translate-y-5 w-24 relative mx-auto my-auto">
-                    <img src="/images/letter-o.png" alt="letter-O" srcset="" a32o class="pak translate-y-[-76%] w-24 relative mx-auto my-auto">
+                    <img src="/images/letter-x.jpg" alt="letter-X" srcset="" a32x class="pak translate-y-5 w-24 relative mx-auto my-auto">
+                    <img src="/images/letter-o.jpg" alt="letter-O" srcset="" a32o class="pak translate-y-[-76%] w-24 relative mx-auto my-auto">
                 </div>
                 <div class="items rounded-2xl relative" onclick="arr33()">
-                    <img src="/images/letter-x.png" alt="letter-X" srcset="" a33x class="pak translate-y-5 w-24 relative mx-auto my-auto">
-                    <img src="/images/letter-o.png" alt="letter-O" srcset="" a33o class="pak translate-y-[-76%] w-24 relative mx-auto my-auto">
+                    <img src="/images/letter-x.jpg" alt="letter-X" srcset="" a33x class="pak translate-y-5 w-24 relative mx-auto my-auto">
+                    <img src="/images/letter-o.jpg" alt="letter-O" srcset="" a33o class="pak translate-y-[-76%] w-24 relative mx-auto my-auto">
                 </div>
 
             </div>
@@ -93,7 +93,7 @@
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
 </body>
 </html>
 
