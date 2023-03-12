@@ -1,3 +1,4 @@
+var chance;
 var a11=0;
 var a12=0;
 var a13=0;
@@ -191,18 +192,7 @@ function gameover(){
         winnerpara.textContent="Congoo! You have won the game!"
     }
 }
-function match(action){
-    switch(action){
-        case "a11":
-            a11=2;break;
-        case "a12":
-            a12=2;break;
-        case "a13":
-            a13=2;break;
-        case "a21":
-            a21=2
-    }
-}
+
 function fun(){
     let comp=ComputerMove();
         let vec=["a11","a12","a13","a21","a22","a23","a31","a32","a33"];
@@ -502,6 +492,7 @@ function xclick(){
     wrapper.classList.add("ind");
     chance=0;
 }
+
 //o click player=1
 function oclick(){
     player=1;
@@ -510,3 +501,25 @@ function oclick(){
     wrapper.classList.add("ind");
     chance=1;
 }
+window.xclick=xclick;
+window.oclick=oclick;
+window.arr33=arr33;
+window.arr23=arr23;
+window.arr13=arr13;
+window.arr22=arr22;
+window.arr11=arr11;
+window.arr12=arr12;
+window.arr21=arr21;
+window.arr32=arr32;
+window.arr31=arr31;
+window.fun=fun;
+window.gameover=gameover;
+window.ComputerMove=ComputerMove;
+window.iswinner=iswinner;
+window.reset=reset;
+
+
+
+
+
+
