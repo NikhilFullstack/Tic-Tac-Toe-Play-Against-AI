@@ -81,11 +81,9 @@ function iswinner(){
     return false;
 }
 function ComputerMove(){
-    let array=[a11,a12,a13,a21,a22,a23,a31,a32,a33];
     let vec=["a11","a12","a13","a21","a22","a23","a31","a32","a33"];
 
     //check comp can win in next move
-    let cnt=0;
     for(let i=0;i<vec.length;i++){
         let e=vec[i];
         if(eval(`${e}==0`))
@@ -100,14 +98,12 @@ function ComputerMove(){
             {
                 
             console.log("computerwins")
-            return vec[cnt];
+            return vec[i];
             }
         }
-        cnt++;
     }
 
     //block player winning move
-    cnt=0;
     for(let ij=0;ij<vec.length;ij++){
         let e=vec[ij];
         if(eval(`${e}==0`))
@@ -126,59 +122,79 @@ function ComputerMove(){
             return e;
             }
         }
-        cnt++;
     }
-
-    //try to take any corner is they are free
-    let corner=[a11,a13,a31,a33];
-    let cornerstr=["a11","a13","a31","a33"];
-
-    let avail=[];
-    let c123=0;
-    let pos=[];
-    corner.forEach((e)=>{
-        if(e==0)
-        {
-            avail.push(cornerstr[c123]);
-            pos.push(c123);
-        }
-        c123++;
-    });
-    if(avail.length>0){
-        let ind=Math.round(Math.random(0,avail.length));
-        corner[pos[ind]]=2;
-        console.log("capture corner",cornerstr[pos[ind]])
-        return cornerstr[pos[ind]];
-    }
-
     //try to take center if it is free
     if(a22==0)
     {
-        a22=2;
+         a22=2;
         return "a22";
     }
 
-    //try to more on rest places
-    let middle=[a12,a21,a23,a32];
-    let middlestr=["a12","a21","a23","a32"];
-    avail=[];
-    c123=0;
-    pos=[]
-    middle.forEach((e)=>{
-        if(e==0)
+    //try to take any corner is they are free
+    let corner=["a11","a13","a31","a33"];
+    let temparr=[];
+    for(let i=0;i<corner.length;i++){
+        let e=corner[i];
+        if(eval(`${e}==0`))
         {
-            avail.push(middlestr[c123]);
-            pos.push(c123);
+            console.log(e);
+            temparr.push(e);
         }
-        c123++;
-    });
-    if(avail.length>0){
-        let ind=Math.round(Math.random(0,avail.length));
-        middle[pos[ind]]=2;
-        return avail[ind];
+    }
+    console.log(temparr);
+    if(temparr.length!=0)
+    {
+        let cnt=temparr.length;
+        let index=Math.floor(Math.random()*cnt);
+        let e=temparr[index];
+        console.log(e,index);
+        eval(`${e}=2`);
+        // eval(`${e}=2`);
+        return e;
     }
     
+    
 
+   
+
+    //try to more on rest places
+        let middle=["a12","a21","a23","a32"];
+        temparr=[];
+        for(let i=0;i<middle.length;i++){
+            let e=middle[i];
+            if(eval(`${e}==0`))
+            {
+                temparr.push(e);
+            }
+        }
+        if(temparr.length!=0)
+        {
+            let cnt=temparr.length;
+            let index=Math.round(Math.random()*cnt);
+            let e=temparr[index];
+            eval(`${e}=2`);
+            // eval(`${e}=2`);
+            return e;
+        }
+
+
+    draw();
+
+}
+function draw(){
+    const myTimeout = setTimeout(myGreeting, 500);
+    function myGreeting() {
+    
+        mainchessboard.classList.remove("ind");
+        mainchessboard.classList.add("pak");
+        playerwon.classList.remove("pak");
+        playerwon.classList.add("ind");
+        winnerpara.textContent="Aww The Game is draw Click on reset it will auto reset in 3 seconds!";
+        const myTimeout = setTimeout(myresort, 2000);
+        function myresort() {
+            reset();
+        }
+    }
 }
 function gameover(){
     const myTimeout = setTimeout(myGreeting, 500);
@@ -446,6 +462,7 @@ function arr32(){
            }
     }
 }
+
 function arr33(){
     if(a33==0)
     {
@@ -472,7 +489,6 @@ function arr33(){
            }
     }
 }
-
 
 let val=0.5;
 //svg animation
@@ -517,9 +533,3 @@ window.gameover=gameover;
 window.ComputerMove=ComputerMove;
 window.iswinner=iswinner;
 window.reset=reset;
-
-
-
-
-
-
