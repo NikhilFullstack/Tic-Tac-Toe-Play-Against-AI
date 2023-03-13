@@ -170,7 +170,7 @@ function ComputerMove(){
         if(temparr.length!=0)
         {
             let cnt=temparr.length;
-            let index=Math.round(Math.random()*cnt);
+            let index=Math.floor(Math.random()*cnt);
             let e=temparr[index];
             eval(`${e}=2`);
             // eval(`${e}=2`);
