@@ -395,19 +395,19 @@ function arr33() {
 //     // val+=0.2;
 
 // })
-// window.xclick=xclick;
-// window.oclick=oclick;
-// window.arr33=arr33;
-// window.arr23=arr23;
-// window.arr13=arr13;
-// window.arr22=arr22;
-// window.arr11=arr11;
-// window.arr12=arr12;
-// window.arr21=arr21;
-// window.arr32=arr32;
-// window.arr31=arr31;
-// window.fun=fun;
-// window.gameover=gameover;
-// window.ComputerMove=ComputerMove;
-// window.iswinner=iswinner;
-// window.reset=reset;
+window.xclick=xclick;
+window.oclick=oclick;
+window.arr33=arr33;
+window.arr23=arr23;
+window.arr13=arr13;
+window.arr22=arr22;
+window.arr11=arr11;
+window.arr12=arr12;
+window.arr21=arr21;
+window.arr32=arr32;
+window.arr31=arr31;
+window.fun=fun;
+window.gameover=gameover;
+window.ComputerMove=ComputerMove;
+window.iswinner=iswinner;
+window.reset=reset;
