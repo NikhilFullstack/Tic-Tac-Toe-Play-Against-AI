@@ -1,68 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.back
-{
-    /* ff 3.6+ */
-    background:-moz-radial-gradient(ellipse at 50% 50%, rgba(182, 130, 213, 1) 0%, rgba(3, 169, 244, 1) 25%, rgba(106, 5, 207, 1) 46%, rgba(154, 57, 220, 1) 69%, rgba(238, 130, 238, 1) 90%);
 
-    /* safari 5.1+,chrome 10+ */
-    background:-webkit-radial-gradient(ellipse at 50% 50%, rgba(182, 130, 213, 1) 0%, rgba(3, 169, 244, 1) 25%, rgba(106, 5, 207, 1) 46%, rgba(154, 57, 220, 1) 69%, rgba(238, 130, 238, 1) 90%);
 
-    /* opera 11.10+ */
-    background:-o-radial-gradient(ellipse at 50% 50%, rgba(182, 130, 213, 1) 0%, rgba(3, 169, 244, 1) 25%, rgba(106, 5, 207, 1) 46%, rgba(154, 57, 220, 1) 69%, rgba(238, 130, 238, 1) 90%);
 
-    /* ie 10+ */
-    background:-ms-radial-gradient(ellipse at 50% 50%, rgba(182, 130, 213, 1) 0%, rgba(3, 169, 244, 1) 25%, rgba(106, 5, 207, 1) 46%, rgba(154, 57, 220, 1) 69%, rgba(238, 130, 238, 1) 90%);
 
-    /* global 92%+ browsers support */
-    background:radial-gradient(ellipse at 50% 50%, rgba(182, 130, 213, 1) 0%, rgba(3, 169, 244, 1) 25%, rgba(106, 5, 207, 1) 46%, rgba(154, 57, 220, 1) 69%, rgba(238, 130, 238, 1) 90%);
-}
-body{
-    background-color: transparent;
-}
-.wrapper{
-    background-image: url("./images/old-paper-transparent-background-3_thumbnail.png");
-background-size: 76% 100%;
-}
-.main{
-    row-gap: 20px;
-    column-gap: 10px;
-}
-.main .items{
-    border: 1px ;
-    box-shadow:8px 14px 15px 10px rgb(199, 178, 75);
-}
-.pak{
-    scale: 0;
-}
-.ind{
-    scale: 1;
-}
-#logo{
+
+/* #logo{
     position: absolute;
     /* transform: translateX(25%); */
-    background-color: transparent;
+    /* background-color: transparent;
     scale: 1;
     width: 60%;
     left: 0%;
     top: 10%;
-}
-.xoimage{
-    border: 0;
-    background-color: transparent;
+} */ */
 
-}
-.xoimage .x-img:hover {
+/* .xoimage .x-img:hover {
     border: 0.5rem solid blueviolet;
     border-radius: 9999px;
-}
-.xoimage .o-img:hover {
+} */
+/* .xoimage .o-img:hover {
     border: 0.5rem solid blueviolet;
     border-radius: 3rem;
-}
+} */
 .anim{
-    animation: line-anim 2s ease forwards infinite;
+    animation: line-anim 20s alternate-reverse cubic-bezier(0.23, 1, 0.320, 1) infinite;
 }
 @keyframes line-anim{
     to{
