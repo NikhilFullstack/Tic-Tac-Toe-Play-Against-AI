@@ -1,5 +1,6 @@
 var chance;
 var player;
+var winner;
 var a11 = 0;
 var a12 = 0;
 var a13 = 0;
@@ -81,7 +82,7 @@ function ComputerMove() {
                 eval(`${e}=0`)
             else {
 
-                // console.log("computerwins")
+                console.log("computerwins")
                 return vec[i];
             }
         }
@@ -100,7 +101,7 @@ function ComputerMove() {
                 eval(`${e}=0`);
             else {
                 eval(`${e}=2`);
-                // console.log("Blocked win", e)
+                console.log("Blocked win", e)
                 return e;
             }
         }
@@ -117,16 +118,16 @@ function ComputerMove() {
     for (let i = 0; i < corner.length; i++) {
         let e = corner[i];
         if (eval(`${e}==0`)) {
-            // console.log(e);
+            console.log(e);
             temparr.push(e);
         }
     }
-    // console.log(temparr);
+    console.log(temparr);
     if (temparr.length != 0) {
         let cnt = temparr.length;
         let index = Math.floor(Math.random() * cnt);
         let e = temparr[index];
-        // console.log(e, index);
+        console.log(e, index);
         eval(`${e}=2`);
         // eval(`${e}=2`);
         return e;
@@ -154,7 +155,7 @@ function ComputerMove() {
         return e;
     }
 
-    // console.log("draw");
+    console.log("draw");
     draw();
 }
 function draw() {
@@ -170,7 +171,7 @@ function gameover() {
 
 function fun() {
     let comp = ComputerMove();
-    // console.log("comp[u move is :", comp);
+    console.log("comp[u move is :", comp);
     let vec = ["a11", "a12", "a13", "a21", "a22", "a23", "a31", "a32", "a33"];
     let origo = [a11o, a12o, a13o, a21o, a22o, a23o, a31o, a32o, a33o];
     let origx = [a11x, a12x, a13x, a21x, a22x, a23x, a31x, a32x, a33x];
@@ -182,7 +183,7 @@ function fun() {
             if (comp == e) {
                 origo[i].classList.remove("hidden");
                 eval(`${e}= 2`);
-                // console.log("eval working:", e, valg[i]);
+                console.log("eval working:", e, valg[i]);
                 break;
             }
         }
